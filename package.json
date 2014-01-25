@@ -1,0 +1,22 @@
+{
+  "name": "cartilage",
+  "version": "0.0.0",
+  "description": "cartilage",
+  "scripts": {
+    "start": "node server.js"
+    , "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ripter/cartilage.git"
+  },
+  "author": "Chris Richards",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ripter/cartilage/issues"
+  },
+  "homepage": "https://github.com/ripter/cartilage",
+  "dependencies": {
+    "express": "~3.4.8"
+  }
+}
