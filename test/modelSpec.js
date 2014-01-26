@@ -1,6 +1,7 @@
 /*global require, describe, beforeEach, it, should */
 
-var Model = require('model');
+var extend = require('extend');
+var Model = require('model')(extend);
 
 describe('model', function() {
   var model;
