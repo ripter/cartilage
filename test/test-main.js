@@ -12,19 +12,22 @@ requirejs.config({
     baseUrl: '/base/src',
 
     paths: {
-        'jquery': 'bower_components/jquery/jquery',
-        'underscore': 'bower_components/underscore/underscore'
+        'jquery': '../bower_components/jquery/jquery',
+        'underscore': '../bower_components/underscore/underscore',
+        'backbone': '../bower_components/backbone/backbone'
     },
 
     shim: {
-        'underscore': {
-            exports: '_'
-        }
+      'underscore': {
+        exports: '_'
+      }
+      , 'backbone': {
+        deps: ['underscore']
+      }
     },
 
     // ask Require.js to load these files (all our tests)
     deps: tests,
-
     // start test run, once Require.js is done
     callback: window.__karma__.start
 });

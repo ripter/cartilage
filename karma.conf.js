@@ -9,13 +9,14 @@ module.exports = function(config) {
 
 
     // frameworks to use
-    frameworks: ['mocha', 'cajon', 'chai'],
+    frameworks: ['mocha', 'cajon', 'chai', 'chai-sinon'],
 
 
     // list of files / patterns to load in the browser
     files: [
       {pattern: 'src/**/*.js', included: false},
       {pattern: 'test/**/*Spec.js', included: false},
+      {pattern: 'bower_components/**/*.js', included: false},
       'test/test-main.js'
     ],
 
@@ -56,7 +57,7 @@ module.exports = function(config) {
     // - Safari (only Mac; has to be installed with `npm install karma-safari-launcher`)
     // - PhantomJS
     // - IE (only Windows; has to be installed with `npm install karma-ie-launcher`)
-    browsers: ['PhantomJS'],
+    browsers: ['Chrome', 'PhantomJS'],
 
 
     // If browser does not capture in given timeout [ms], kill it
@@ -65,6 +66,6 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, it capture browsers, run tests and exit
-    singleRun: true
+    singleRun: false
   });
 };

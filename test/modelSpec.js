@@ -41,6 +41,13 @@ describe('model', function() {
     model.get('last').should.equal('Richards');
   });
 
+  it('should update an item', function() {
+    model.set('name', 'Chris');
+    model.set('name', 'Richards');
+
+    model.get('name').should.equal('Richards');
+  });
+
   describe('two models', function() {
     var model2;
 
